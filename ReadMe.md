@@ -7,8 +7,11 @@ for example:
 
 <b>CMD command:</b>
 
-set path=C:\Program Files\Java\jdk-14\bin
+set path=C:\Program Files\Java\jdk-14\bin<br>
+
+<b>Classes that need (1) are mentioned below </b> <br>
+SwitchExpressionDemo.java <br> <br>
  
- 
- <b>Classes that need (1) are mentioned below </b>  <br>:
- SwitchExpressionDemo.java
+<b>CMD command(for setting jdk 15):</b><br>
+
+set path=C:\Program Files\Java\jdk-15\bin
