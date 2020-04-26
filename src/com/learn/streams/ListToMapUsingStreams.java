@@ -12,11 +12,12 @@ public class ListToMapUsingStreams {
 		LocationStats mumbaiLoca = new LocationStats();
 		mumbaiLoca.setCountry("India");
 		mumbaiLoca.setLatestTotalCases(10);
-		
-		//int totalReportedCasesInIndia = indianStats.stream().mapToInt(stat -> stat.getLatestTotalCases()).sum();
-		
-		Map<String, Integer> allStatssMap = allStats.stream()
-				.collect(Collectors.toMap(LocationStats::getCountry, LocationStats::getLatestTotalCases, (oldValue, newValue) -> oldValue));
+
+		Map<String, Integer> allStatssMap = allStats.stream().collect(Collectors.toMap(LocationStats::getCountry,
+				LocationStats::getLatestTotalCases, (oldValue, newValue) -> oldValue));
+		for (String place : allStatssMap.keySet()) {
+			System.out.println("This " + place + " has : " + allStatssMap.get(place) + " cases");
+		}
 	}
 
 }
